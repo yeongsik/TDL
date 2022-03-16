@@ -18,8 +18,6 @@ public class UserController {
     @PostMapping("/auth")
     public String auth(Model model) {
         String id = model.getAttribute("id").toString();
-        model.getAttribute("password")
-
         return "/";
     }
 }
