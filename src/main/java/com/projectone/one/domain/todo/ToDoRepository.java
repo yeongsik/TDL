@@ -1,22 +1,10 @@
 package com.projectone.one.domain.todo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 
+@Repository
+public interface ToDoRepository extends JpaRepository<ToDo , Long> {
 
-import com.projectone.one.domain.todo.ToDo;
-import com.projectone.one.domain.user.User;
-
-import java.util.List;
-
-public interface ToDoRepository {
-
-    ToDo save(ToDo todo);
-
-    List<ToDo> findByUserForDay(User user);
-
-    List<ToDo> findByUserForWeek(User user);
-
-    List<ToDo> findByUserForMonth(User user);
-
-    List<ToDo> findAllByUser(User user);
 
 }
